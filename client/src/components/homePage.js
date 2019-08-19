@@ -3,15 +3,14 @@
 import React, { Component } from 'react';
 import Fade from '@material-ui/core/Fade';
 import logo from '../circle-cropped.png';
-import './App.css';
+import './HomePage.css';
 
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Grid from "@material-ui/core/Grid";
 
 import GithubButton  from './githubButton'
-
+import Button from '@material-ui/core/Button';
+import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 
 class Homepage extends Component{
 
@@ -27,15 +26,22 @@ class Homepage extends Component{
                     Pham
                   </Typography>
                   
-                  <Typography variant="h2">
+                  <Typography variant="h2"  style={{color: '#cfd8dc', paddingBottom:"3%"}}>
                       Software Developer in Phoenix, AZ
-                  </Typography>
-
-                  <Typography variant="h6"  style={{paddingBottom:"3%"}}>
-                      Computer Science Major at Arizona State
                   </Typography>
                   
                   <GithubButton link="https://gitlab.com/users/MatthewPh/projects" />  
+                  &nbsp;
+                  <Button
+                    size='small'
+                    color="primary"
+                    variant="contained"
+                    href={'https://drive.google.com/file/d/1VlsMCqk9Q4rO6KLlNGOFVmUuDGfEkKss/view?usp=sharing'}
+                    >
+                    Resume  &nbsp;
+                    <DescriptionOutlinedIcon style={{ height:"30", width:"30"}}/>
+                  </Button>
+
                 </Grid>  
               </Fade>
 

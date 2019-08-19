@@ -9,6 +9,7 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Homepage from './components/homePage';
 import SignUp from './components/SignUpPage';
 import ProjectPage from './components/ProjectsPage';
+import AboutPage from './components/AboutPage';
 
 
 //fancy UI elevation for navbar
@@ -51,9 +52,12 @@ class App extends Component{
       this.refs.Home.scrollIntoView({behavior: "smooth"});
     }
     else if(newValue === 1){
-      this.refs.Projects.scrollIntoView({behavior: "smooth", block: "center"});
+      this.refs.About.scrollIntoView({behavior: "smooth", block: "center"});
     }
     else if(newValue === 2){
+      this.refs.Projects.scrollIntoView({behavior: "smooth", block: "center"});
+    }
+    else if(newValue === 3){
       this.refs.Contact.scrollIntoView({behavior: "smooth"});
     }
   }
@@ -79,6 +83,7 @@ class App extends Component{
                 aria-label="simple tabs example"
               >
                 <Tab label="Home"  />
+                <Tab label="About" />
                 <Tab label="Projects" />
                 <Tab label="Contact" />
               </Tabs>
@@ -91,6 +96,9 @@ class App extends Component{
             <Homepage/>
           </div>
 
+        <div ref="About">
+          <AboutPage/>
+        </div>
 
         <div ref="Projects">
           <ProjectPage/>

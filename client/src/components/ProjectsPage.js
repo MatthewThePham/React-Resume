@@ -7,10 +7,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import CardProj from './cardDescrip';
 
 class ProjectsPage extends Component{
-    
+   
     render(){
         return(
-            <div style={{ paddingTop:120, paddingBottom: 120, backgroundColor: '#455a64'}}>
+            <div style={{ paddingTop:120, paddingBottom: 120, backgroundColor: '#282c34'}}>
                 <Typography variant="h2" component="h2" style={{ color: 'white'}}  >
                     <b>Projects</b>
                 </Typography>

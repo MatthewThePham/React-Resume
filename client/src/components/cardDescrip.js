@@ -9,9 +9,6 @@ import { flexbox } from '@material-ui/system';
 
 export default function cardDescrip(props) {
     
-
-
-    
     //because can't dynamically load values using require, must return const
     //ie cant do require({INSERT_VAR_HERE}), have to do require({"../path"})
     function imageReturned(){
@@ -23,35 +20,25 @@ export default function cardDescrip(props) {
         }
     }
 
-    /*
-                style = {{
-                    component: "img",
-                    backgroundColor: '#607d8b',
-                    paddingTop: '56%', // 16:9
-                }}
-    */
-
     return(
-        <Card>
+        <Card style={{ backgroundColor: '#455a64'}}>
             <CardMedia
                 style = {{
                     paddingTop:"60%",
                     width:"100%"
                 }}
-
-                    image={ 
-                        imageReturned(props.imagePath)
-                    }   
-                    title="React"
-
-                
+                image={ 
+                    imageReturned(props.imagePath)
+                }   
+                title="React"  
             />
-            <CardContent >
 
-                <Typography variant="h5" component="h2">
+            <CardContent style={{color: '#cfd8dc'}}>
+
+                <Typography variant="h5" component="h2" style={{color: 'white'}} >
                     {props.title}
                 </Typography>
-                <Typography color="textSecondary">
+                <Typography style={{color: '#90a4ae'}}>
                     {props.date}
                 </Typography>
                 <Typography variant="body" component="p">
@@ -61,7 +48,7 @@ export default function cardDescrip(props) {
             </CardContent>
 
             <CardContent style={{ backgroundColor: '#607d8b' }}>
-                 <Typography variant="body2" color="textSecondary">
+                 <Typography variant="body2" style={{color: '#cfd8dc'}}>
                     {props.technologyUsed}
                 </Typography>
 
