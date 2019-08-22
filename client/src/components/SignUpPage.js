@@ -38,15 +38,10 @@ const useStyles = makeStyles(theme => ({
     }
   },
   paper: {
-    marginTop: theme.spacing(8),
+    paddingTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-    marginBottom: theme.spacing(2)
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -56,6 +51,16 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#455a64',
     margin: theme.spacing(3, 0, 2),
   },
+  inputLabel: {
+    color: "#cfd8dc"
+  },
+  input: {
+    "&:-webkit-autofill": {
+      WebkitBoxShadow: "0 0 0 1000px #607d8b inset",
+      WebkitTextFillColor:"white"
+    },
+    color: "white"
+  }
 }));
 
 
@@ -175,26 +180,35 @@ export default function SignUp() {
   };
 
   return (
+    <div style={{backgroundColor: '#607d8b'}}>
     <Container component="main" maxWidth="xs">
 
       <CssBaseline />
       <div className={classes.paper} >
         <Avatar
-          className={classes.bigAvatar}
           src={circleAvatar}
         />
 
         { 
         ! values.submission 
         ?
-        <Fragment >
-        <Typography component="h1" variant="h5">
+        <Fragment>
+        <Typography component="h1" variant="h5" className={classes.input}>
           Contact Me
         </Typography>
         <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
+
+                inputProps={{
+                  className: classes.input
+                }}
+
+                InputLabelProps={{
+                  className: classes.inputLabel
+                }}
+                
                 variant="outlined" 
                 required
                 fullWidth
@@ -209,6 +223,14 @@ export default function SignUp() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+
+              inputProps={{
+                className: classes.input
+              }}
+
+              InputLabelProps={{
+                className: classes.inputLabel
+              }}
                 variant="outlined"
                 required
                 fullWidth
@@ -224,6 +246,14 @@ export default function SignUp() {
             </Grid>
             <Grid item xs={12} >
               <TextField
+                inputProps={{
+                  className: classes.input
+                }}
+
+                InputLabelProps={{
+                  className: classes.inputLabel
+                }}
+
                 variant="outlined"
                 multiline
                 rows="4"
@@ -252,12 +282,12 @@ export default function SignUp() {
         :
         <Fragment>
             <Fade in={true} timeout={1000}>
-              <Typography component="h3" variant="h5">
+              <Typography component="h3" variant="h5" className={classes.input}>
                 Thanks for the response!
               </Typography>
             </Fade>
             <Fade in={true} timeout={1000}>
-              <Typography variant="subtitle1" gutterBottom>
+              <Typography variant="subtitle1" className={classes.inputLabel} gutterBottom>
                 We will get back to you shortly.
               </Typography>
             </Fade>
@@ -271,5 +301,6 @@ export default function SignUp() {
         <MadeWithLove />
       </Box>
     </Container>
+    </div>
   );
 }

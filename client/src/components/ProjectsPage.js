@@ -10,13 +10,13 @@ class ProjectsPage extends Component{
    
     render(){
         return(
-            <div style={{ paddingTop:120, paddingBottom: 120, backgroundColor: '#282c34'}}>
-                <Typography variant="h2" component="h2" style={{ color: 'white'}}  >
+            <div style={{ paddingTop:"15%", paddingBottom: 120, backgroundColor: '#282c34'}}>
+                <Typography variant="h2" component="h2" style={{ color: 'white', paddingBottom: "2%"}}  >
                     <b>Projects</b>
                 </Typography>
 
-                <Grid container justify = 'space-evenly' style={{ paddingTop:40}}>     
-                    <Grid item xs={6} sm={3}>
+                <Grid container justify = 'space-evenly' alignItems="stretch" style={{ paddingTop:"5%"}}>     
+                    <Grid item xs={8} sm={3}>
                         <CardProj 
                             imagePath="alexaLogo.png"
                             
@@ -28,7 +28,7 @@ class ProjectsPage extends Component{
                         />
                     </Grid>
 
-                    <Grid item xs={6} sm={3}>
+                    <Grid item xs={8} sm={3}>
                         <CardProj 
                             imagePath="reactLogo.svg"
                             
@@ -40,7 +40,7 @@ class ProjectsPage extends Component{
                         />
                     </Grid>
 
-                    <Grid item xs={6} sm={3}>
+                    <Grid item xs={8} sm={3}>
                         <CardProj 
                             imagePath="alexaLogo.png"
                             

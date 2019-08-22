@@ -41,7 +41,7 @@ export default function cardDescrip(props) {
                 <Typography style={{color: '#90a4ae'}}>
                     {props.date}
                 </Typography>
-                <Typography variant="body" component="p">
+                <Typography variant="body1" component="p">
                     {props.decription}
                     <br />
                 </Typography>

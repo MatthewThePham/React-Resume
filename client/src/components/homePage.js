@@ -17,7 +17,7 @@ class Homepage extends Component{
     render() {
         return (
           <header className="App-header">
-            <Grid container justify = 'space-evenly' flexShrink={1} style={{paddingTop:"10%",paddingBottom:"5%", paddingLeft:"20%",paddingRight:"5%", textAlign:"left"}}>
+            <Grid container justify = 'space-evenly' style={{paddingTop:"10%",paddingBottom:"5%", paddingLeft:"20%",paddingRight:"5%", textAlign:"left"}}>
               <Fade in={true} timeout={2000}>
                 <Grid item md>
                   <Typography variant="h1" style={{fontWeight:"bold" ,flexShrink: 1 }}>
@@ -27,7 +27,11 @@ class Homepage extends Component{
                   </Typography>
                   
                   <Typography variant="h2"  style={{color: '#cfd8dc', paddingBottom:"3%"}}>
-                      Software Developer in Phoenix, AZ
+                      Software Developer
+                  </Typography>
+
+                  <Typography variant="h2" style={{color: '#cfd8dc', paddingBottom:"3%"}}>
+                    In Phoenix, AZ
                   </Typography>
                   
                   <GithubButton link="https://gitlab.com/users/MatthewPh/projects" />  
@@ -46,8 +50,8 @@ class Homepage extends Component{
               </Fade>
 
               <Fade in={true} timeout={2000}>
-                <Grid item md style={{ paddingTop:"5%"}}>
-                  <img src={logo} align="left" className="App-logo" alt="logo"/>
+                <Grid item md style={{ paddingTop:"5%", paddingRight:"10%"}}>
+                  <img src={logo} style={{align:"left"}} className="App-logo" alt="logo"/>
                 </Grid>  
               </Fade>
 

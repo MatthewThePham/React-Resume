@@ -4,6 +4,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Slide from '@material-ui/core/Slide';
 
 //example from material-ui
 import Homepage from './components/homePage';
@@ -12,21 +13,19 @@ import ProjectPage from './components/ProjectsPage';
 import AboutPage from './components/AboutPage';
 
 
-//fancy UI elevation for navbar
-function ElevationScroll(props) {
+//fancy UI hiding for navbar
+function HideOnScroll(props) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
   // This is only being set here because the demo is in an iframe.
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
-    target: window ? window() : undefined,
-  });
+  const trigger = useScrollTrigger({ target: window ? window() : undefined });
 
-  return React.cloneElement(children, {
-    elevation: trigger ? 10 : 0,
-  });
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
 }
 
 
@@ -76,19 +75,20 @@ class App extends Component{
     return (
       <div className="App">
 
-        <ElevationScroll>
+        <HideOnScroll>
           <AppBar style={{ backgroundColor: '#607d8b' }} >
               <Tabs
                 onChange={this.handleChange}
                 aria-label="simple tabs example"
+                style={{paddingLeft:"10%", justify:"center"}}
               >
-                <Tab label="Home"  />
-                <Tab label="About" />
-                <Tab label="Projects" />
-                <Tab label="Contact" />
+                <Tab label="Home" style={{ minWidth: 100}}/>
+                <Tab label="About" style={{minWidth: 100}}/>
+                <Tab label="Works" style={{minWidth: 100}}/>
+                <Tab label="Contact" style={{minWidth: 100}}/>
               </Tabs>
           </AppBar>
-        </ElevationScroll>
+        </HideOnScroll>
 
         <div>{this.state.response}</div>
 
