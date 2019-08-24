@@ -16,7 +16,7 @@ class AboutPage extends Component{
                     <b>About Me</b>
                 </Typography>
 
-                <Grid container style={{paddingTop:"5%",paddingBottom:"5%", paddingLeft:"10%",paddingRight:"5%", textAlign:"left"}}>
+                <Grid container style={{paddingTop:"5%",paddingBottom:"5%", paddingLeft:"10%",paddingRight:"10%", textAlign:"left"}}>
                     <Grid item md>
                         <Typography variant="h6"  style={{ color: '#cfd8dc',paddingBottom:"3%", paddingLeft:"5%"}}>
                             Hello, my name is Matthew Pham. I am a Software Engineer, majoring in Computer Science at <b>Arizona State</b>.

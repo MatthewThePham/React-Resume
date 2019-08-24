@@ -5,6 +5,9 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
+import Grow from '@material-ui/core/Grow';
+import Fade from '@material-ui/core/Fade';
+
 
 //example from material-ui
 import Homepage from './components/homePage';
@@ -76,18 +79,33 @@ class App extends Component{
       <div className="App">
 
         <HideOnScroll>
+        <Fade in={true} timeout={2000}>
           <AppBar style={{ backgroundColor: '#607d8b' }} >
               <Tabs
+                value={false}
                 onChange={this.handleChange}
                 aria-label="simple tabs example"
-                style={{paddingLeft:"10%", justify:"center"}}
+                centered
               >
-                <Tab label="Home" style={{ minWidth: 100}}/>
-                <Tab label="About" style={{minWidth: 100}}/>
-                <Tab label="Works" style={{minWidth: 100}}/>
-                <Tab label="Contact" style={{minWidth: 100}}/>
+                <Grow in={true} timeout={1500}>
+                  <Tab label="Home" style={{ minWidth: 100}}/>
+                </Grow>
+
+                <Grow in={true} timeout={2000}>
+                  <Tab label="About" style={{minWidth: 100}}/>
+                </Grow>
+
+                <Grow in={true} timeout={3000}>
+                  <Tab label="Works" style={{minWidth: 100}}/>
+                </Grow>
+
+                <Grow in={true} timeout={3500}>
+                  <Tab label="Contact" style={{minWidth: 100}}/>
+                </Grow>
+
               </Tabs>
           </AppBar>
+        </Fade>
         </HideOnScroll>
 
         <div>{this.state.response}</div>

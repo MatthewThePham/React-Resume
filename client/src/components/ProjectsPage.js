@@ -16,7 +16,7 @@ class ProjectsPage extends Component{
                 </Typography>
 
                 <Grid container justify = 'space-evenly' alignItems="stretch" style={{ paddingTop:"5%"}}>     
-                    <Grid item xs={8} sm={3}>
+                    <Grid item xs={7} md={3}>
                         <CardProj 
                             imagePath="alexaLogo.png"
                             
@@ -28,7 +28,7 @@ class ProjectsPage extends Component{
                         />
                     </Grid>
 
-                    <Grid item xs={8} sm={3}>
+                    <Grid item xs={7} md={3}>
                         <CardProj 
                             imagePath="reactLogo.svg"
                             
@@ -40,7 +40,7 @@ class ProjectsPage extends Component{
                         />
                     </Grid>
 
-                    <Grid item xs={8} sm={3}>
+                    <Grid item xs={7} md={3}>
                         <CardProj 
                             imagePath="alexaLogo.png"
                             
