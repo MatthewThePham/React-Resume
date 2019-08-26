@@ -11,10 +11,10 @@ class ProjectsPage extends Component{
     render(){
         return(
             <div style={{ paddingTop:"10%", paddingBottom: "10%", backgroundColor: '#282c34'}}>
-                <Typography variant="h2" component="h2" style={{ color: 'white'}}  >
-                    <hr width="20%"></hr>
+                <Typography variant="h3" component="h2" style={{ color: 'white'}}  >
+                    <hr width="60%"></hr>
                     <b>Projects</b>
-                    <hr width="30%"></hr>
+                    <hr width="70%"></hr>
                 </Typography>
 
                 <Grid container justify = 'space-evenly' alignItems="stretch" style={{ paddingTop:"2%"}}>     

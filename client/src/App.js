@@ -78,7 +78,7 @@ class App extends Component{
       <div className="App">
 
         <HideOnScroll>
-          <AppBar style={{ backgroundColor: '#607d8b' }} >
+          <AppBar style={{ backgroundColor: '#282c34' }} >
               <Tabs
                 value={false}
                 onChange={this.handleChange}

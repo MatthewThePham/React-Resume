@@ -17,10 +17,10 @@ class AboutPage extends Component{
         return(
             <div style={{backgroundColor: '#282c34'}}>
 
-                <Typography variant="h2" component="h2" style={{ paddingTop:"5%", color: 'white'}}  >
-                    <hr width="20%"></hr>
+                <Typography variant="h3" component="h2" style={{ paddingTop:"5%", color: 'white'}}  >
+                    <hr width="60%"></hr>
                     <b>About Me</b>
-                    <hr width="30%"></hr>
+                    <hr width="70%"></hr>
                 </Typography>
 
                 <Grid container style={{paddingTop:"3%", paddingLeft:"15%",paddingRight:"15%", textAlign:"left"}}>
@@ -48,8 +48,8 @@ class AboutPage extends Component{
                     <Grid item md={7} style={{paddingLeft:"2%"}}>
 
                         <Typography variant="h6" style={{ textAlign:"left", color: '#cfd8dc',paddingBottom:"3%", paddingLeft:"5%"}}>
-                            My name is <b>Matthew Pham</b>. I am a Software Engineer at ASU, who enjoys to build products with web technologies and PC gaming.
-                            I work with the following languages and frameworks.
+                            My name is <b>Matthew Pham</b>. I am a Software Engineer at ASU, who enjoys building web technologies products and loves to PC game.
+                            These are the languages and frameworks I work with.
                         </Typography>
 
                         <Grid container justify="center">
