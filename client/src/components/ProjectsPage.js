@@ -10,12 +10,14 @@ class ProjectsPage extends Component{
    
     render(){
         return(
-            <div style={{ paddingTop:"15%", paddingBottom: 120, backgroundColor: '#282c34'}}>
-                <Typography variant="h2" component="h2" style={{ color: 'white', paddingBottom: "2%"}}  >
+            <div style={{ paddingTop:"10%", paddingBottom: "10%", backgroundColor: '#282c34'}}>
+                <Typography variant="h2" component="h2" style={{ color: 'white'}}  >
+                    <hr width="20%"></hr>
                     <b>Projects</b>
+                    <hr width="30%"></hr>
                 </Typography>
 
-                <Grid container justify = 'space-evenly' alignItems="stretch" style={{ paddingTop:"5%"}}>     
+                <Grid container justify = 'space-evenly' alignItems="stretch" style={{ paddingTop:"2%"}}>     
                     <Grid item xs={7} md={3}>
                         <CardProj 
                             imagePath="alexaLogo.png"

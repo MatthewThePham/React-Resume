@@ -18,10 +18,10 @@ class Homepage extends Component{
     render() {
         return (
           <header className="App-header">
-            <Grid container justify = 'space-evenly' style={{paddingTop:"10%",paddingBottom:"5%", paddingLeft:"24%",paddingRight:"10%", textAlign:"left"}}>
+            <Grid container justify = 'space-evenly' style={{paddingTop:"10%",paddingBottom:"7%", paddingLeft:"24%",paddingRight:"10%", textAlign:"left"}}>
                 <Grid item md>
 
-                  <Fade in={true} timeout={3000}>
+                  <Fade in={true} timeout={2000}>
                     <Typography variant="h1" style={{fontWeight:"bold" ,flexShrink: 1 }}>
                       Matthew 
                       <br/>
@@ -29,7 +29,7 @@ class Homepage extends Component{
                     </Typography>
                   </Fade>
 
-                  <Fade in={true} timeout={5500}>
+                  <Fade in={true} timeout={3500}>
                     <Typography variant="h2"  style={{color: '#cfd8dc', paddingBottom:"3%"}}>
                         Software Developer
                     </Typography>
@@ -40,6 +40,8 @@ class Homepage extends Component{
                       In Phoenix, AZ
                     </Typography>
                   </Fade>
+
+                  <hr width="53%" align="left"></hr>
 
                   <GithubButton link="https://gitlab.com/users/MatthewPh/projects" />  
 
@@ -56,11 +58,12 @@ class Homepage extends Component{
                       <DescriptionOutlinedIcon style={{ height:"30", width:"30"}}/>
                     </Button>
                   </Grow>
+                  <hr width="53%" align="left"></hr>
 
 
                 </Grid>  
 
-              <Fade in={true} timeout={3500}>
+              <Fade in={true} timeout={1500}>
                 <Grid item md={6} style={{ paddingTop:"5%", paddingRight:"20%"}}>
                   <img src={logo} style={{align:"left"}} className="App-logo" alt="logo"/>
                 </Grid>  

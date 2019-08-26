@@ -5,7 +5,6 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import GithubButton  from './githubButton'
-import { flexbox } from '@material-ui/system';
 
 export default function cardDescrip(props) {
     
@@ -21,7 +20,7 @@ export default function cardDescrip(props) {
     }
 
     return(
-        <Card style={{ backgroundColor: '#455a64'}}>
+        <Card elevation='24' style={{ backgroundColor: '#455a64'}}>
             <CardMedia
                 style = {{
                     paddingTop:"60%",

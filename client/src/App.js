@@ -6,7 +6,6 @@ import Tab from "@material-ui/core/Tab";
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
 import Grow from '@material-ui/core/Grow';
-import Fade from '@material-ui/core/Fade';
 
 
 //example from material-ui
@@ -51,7 +50,7 @@ class App extends Component{
     //const temp = this.state.refs;
     console.log(newValue);
     if( newValue === 0){
-      this.refs.Home.scrollIntoView({behavior: "smooth"});
+      this.refs.Home.scrollIntoView({behavior: "smooth",block: "center"});
     }
     else if(newValue === 1){
       this.refs.About.scrollIntoView({behavior: "smooth", block: "center"});
@@ -60,7 +59,7 @@ class App extends Component{
       this.refs.Projects.scrollIntoView({behavior: "smooth", block: "center"});
     }
     else if(newValue === 3){
-      this.refs.Contact.scrollIntoView({behavior: "smooth"});
+      this.refs.Contact.scrollIntoView({behavior: "smooth", block: "center"});
     }
   }
 
@@ -79,7 +78,6 @@ class App extends Component{
       <div className="App">
 
         <HideOnScroll>
-        <Fade in={true} timeout={2000}>
           <AppBar style={{ backgroundColor: '#607d8b' }} >
               <Tabs
                 value={false}
@@ -105,7 +103,6 @@ class App extends Component{
 
               </Tabs>
           </AppBar>
-        </Fade>
         </HideOnScroll>
 
         <div>{this.state.response}</div>
