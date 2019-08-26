@@ -41,7 +41,7 @@ class Homepage extends Component{
                     </Typography>
                   </Fade>
 
-                  <hr width="53%" align="left"></hr>
+                  <hr width="225px" align="left"></hr>
 
                   <GithubButton link="https://gitlab.com/users/MatthewPh/projects" />  
 
@@ -58,7 +58,7 @@ class Homepage extends Component{
                       <DescriptionOutlinedIcon style={{ height:"30", width:"30"}}/>
                     </Button>
                   </Grow>
-                  <hr width="53%" align="left"></hr>
+                  <hr width="225px" align="left"></hr>
 
 
                 </Grid>  

@@ -23,10 +23,10 @@ class AboutPage extends Component{
                     <hr width="70%"></hr>
                 </Typography>
 
-                <Grid container style={{paddingTop:"3%", paddingLeft:"15%",paddingRight:"15%", textAlign:"left"}}>
+                <Grid container justify = 'space-evenly' style={{paddingTop:"3%", paddingLeft:"15%",paddingRight:"15%", textAlign:"left"}}>
                     
                     <Grid item md={5} style={{paddingLeft:"5%", paddingBottom:"10%"}}>
-                        <Card elevation='20' style={{ backgroundColor: '#455a64'}}>
+                        <Card elevation={20} style={{ backgroundColor: '#607d8b'}}>
                             <CardMedia
                                 style = {{
                                     paddingTop:"50%",
@@ -37,19 +37,18 @@ class AboutPage extends Component{
                                     require("../asuEngineering.jpeg")
                                 } 
                             />
-                            <CardContent style={{color: '#cfd8dc'}}>
-                                <Typography variant="h6"  style={{ textAlign:"center", color: '#cfd8dc'}}>
-                                    Majoring in Computer Science at <b>Arizona State</b>.
+                            <CardContent>
+                                <Typography variant="subtitle2"  style={{ textAlign:"center", color: '#cfd8dc'}}>
+                                    <i>Majoring in <b>Computer Science</b> at <b style={{color:"white"}}>Arizona State University</b>.</i>
                                 </Typography>
                             </CardContent>
                         </Card>
                     </Grid>
 
                     <Grid item md={7} style={{paddingLeft:"2%"}}>
-
-                        <Typography variant="h6" style={{ textAlign:"left", color: '#cfd8dc',paddingBottom:"3%", paddingLeft:"5%"}}>
-                            My name is <b>Matthew Pham</b>. I am a Software Engineer at ASU, who enjoys building web technologies products and loves to PC game.
-                            These are the languages and frameworks I work with.
+                        <Typography variant="subtitle1" style={{ textAlign:"left", color: '#cfd8dc',paddingBottom:"3%", paddingLeft:"5%"}}>
+                            My name is <b style={{color:"white"}}>Matthew Pham</b>. I am a Software Engineer studying at ASU, who enjoys building web technologies products and loves to PC game.
+                            I work with these languages and frameworks.
                         </Typography>
 
                         <Grid container justify="center">

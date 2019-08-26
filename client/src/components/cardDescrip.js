@@ -20,7 +20,7 @@ export default function cardDescrip(props) {
     }
 
     return(
-        <Card elevation='24' style={{ backgroundColor: '#455a64'}}>
+        <Card elevation={24} style={{ backgroundColor: '#455a64'}}>
             <CardMedia
                 style = {{
                     paddingTop:"60%",
@@ -34,11 +34,11 @@ export default function cardDescrip(props) {
 
             <CardContent style={{color: '#cfd8dc'}}>
 
-                <Typography variant="h5" component="h2" style={{color: 'white'}} >
+                <Typography variant="h6" component="h2" style={{color: 'white'}} >
                     {props.title}
                 </Typography>
-                <Typography style={{color: '#90a4ae'}}>
-                    {props.date}
+                <Typography variant="body2" style={{color: '#90a4ae', paddingBottom:"2%"}}>
+                 <i>{props.date}</i>
                 </Typography>
                 <Typography variant="body1" component="p">
                     {props.decription}
@@ -47,7 +47,7 @@ export default function cardDescrip(props) {
             </CardContent>
 
             <CardContent style={{ backgroundColor: '#607d8b' }}>
-                 <Typography variant="body2" style={{color: '#cfd8dc'}}>
+                 <Typography variant="subtitle2" style={{color: '#cfd8dc'}}>
                     {props.technologyUsed}
                 </Typography>
 
