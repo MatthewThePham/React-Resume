@@ -29,14 +29,14 @@ class Homepage extends Component{
                     </Typography>
                   </Fade>
 
-                  <Fade in={true} timeout={3500}>
+                  <Fade in={true} timeout={4500}>
                     <Typography variant="h2"  style={{color: '#cfd8dc', paddingBottom:"3%"}}>
                         Software Developer
                     </Typography>
                   </Fade>
                   
                   <Fade in={true} timeout={5500}>
-                    <Typography variant="h2" style={{color: '#cfd8dc', paddingBottom:"3%"}}>
+                    <Typography variant="h3" style={{color: '#607d8b', paddingBottom:"3%"}}>
                       In Phoenix, AZ
                     </Typography>
                   </Fade>

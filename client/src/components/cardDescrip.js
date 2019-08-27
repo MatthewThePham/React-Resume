@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import GithubButton  from './githubButton'
+import Fade from 'react-reveal/Fade'; // Importing Zoom effect
 
 export default function cardDescrip(props) {
     
@@ -20,6 +21,7 @@ export default function cardDescrip(props) {
     }
 
     return(
+        <Fade timeout="2000">
         <Card elevation={24} style={{ backgroundColor: '#455a64'}}>
             <CardMedia
                 style = {{
@@ -54,5 +56,6 @@ export default function cardDescrip(props) {
                 <GithubButton link={props.link}/>
             </CardContent>
         </Card>
+        </Fade>
     );
 }

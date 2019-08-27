@@ -10,6 +10,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
+import Zoom from 'react-reveal/Zoom'; // Importing Zoom effect
+
 
 class AboutPage extends Component{
 
@@ -23,9 +25,11 @@ class AboutPage extends Component{
                     <hr width="70%"></hr>
                 </Typography>
 
+
                 <Grid container justify = 'space-evenly' style={{paddingTop:"3%", paddingLeft:"15%",paddingRight:"15%", textAlign:"left"}}>
                     
                     <Grid item md={5} style={{paddingLeft:"5%", paddingBottom:"10%"}}>
+                        <Zoom timeout={2000}>
                         <Card elevation={20} style={{ backgroundColor: '#607d8b'}}>
                             <CardMedia
                                 style = {{
@@ -43,12 +47,14 @@ class AboutPage extends Component{
                                 </Typography>
                             </CardContent>
                         </Card>
+                        </Zoom>
                     </Grid>
 
                     <Grid item md={7} style={{paddingLeft:"2%"}}>
                         <Typography variant="subtitle1" style={{ textAlign:"left", color: '#cfd8dc',paddingBottom:"3%", paddingLeft:"5%"}}>
-                            My name is <b style={{color:"white"}}>Matthew Pham</b>. I am a Software Engineer studying at ASU, who enjoys building web technologies products and loves to PC game.
-                            I work with these languages and frameworks.
+                            My name is <b style={{color:"white"}}>Matthew Pham</b>. I am a Software Engineer currently studying at ASU for my bachelors in Computer Science.
+                            I enjoy building web apps in both backend and frontend.
+                            My expertise covers these languages and frameworks.
                         </Typography>
 
                         <Grid container justify="center">

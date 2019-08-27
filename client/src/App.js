@@ -32,6 +32,15 @@ function HideOnScroll(props) {
 
 
 class App extends Component{
+  constructor(props) {
+    super(props);
+
+    this.Home = React.createRef();
+    this.About = React.createRef();
+    this.Projects = React.createRef();
+    this.Contact = React.createRef();
+
+  }
 
   componentDidMount(){
     //test to see if server connects
@@ -50,16 +59,16 @@ class App extends Component{
     //const temp = this.state.refs;
     console.log(newValue);
     if( newValue === 0){
-      this.refs.Home.scrollIntoView({behavior: "smooth",block: "center"});
+      this.Home.current.scrollIntoView({behavior: "smooth",block: "center"});
     }
     else if(newValue === 1){
-      this.refs.About.scrollIntoView({behavior: "smooth", block: "center"});
+      this.About.current.scrollIntoView({behavior: "smooth", block: "center"});
     }
     else if(newValue === 2){
-      this.refs.Projects.scrollIntoView({behavior: "smooth", block: "center"});
+      this.Projects.current.scrollIntoView({behavior: "smooth", block: "center"});
     }
     else if(newValue === 3){
-      this.refs.Contact.scrollIntoView({behavior: "smooth", block: "center"});
+      this.Contact.current.scrollIntoView({behavior: "smooth", block: "center"});
     }
   }
 
@@ -85,19 +94,19 @@ class App extends Component{
                 aria-label="simple tabs example"
                 centered
               >
-                <Grow in={true} timeout={1500}>
+                <Grow in={true} timeout={1500+1500}>
                   <Tab label="Home" style={{ minWidth: 100}}/>
                 </Grow>
 
-                <Grow in={true} timeout={2000}>
+                <Grow in={true} timeout={2000+1500}>
                   <Tab label="About" style={{minWidth: 100}}/>
                 </Grow>
 
-                <Grow in={true} timeout={3000}>
+                <Grow in={true} timeout={3000+1500}>
                   <Tab label="Works" style={{minWidth: 100}}/>
                 </Grow>
 
-                <Grow in={true} timeout={3500}>
+                <Grow in={true} timeout={3500+1500}>
                   <Tab label="Contact" style={{minWidth: 100}}/>
                 </Grow>
 
@@ -107,19 +116,19 @@ class App extends Component{
 
         <div>{this.state.response}</div>
 
-          <div ref="Home">
+          <div ref={this.Home}>
             <Homepage/>
           </div>
 
-        <div ref="About">
+        <div ref={this.About}>
           <AboutPage/>
         </div>
 
-        <div ref="Projects">
+        <div ref={this.Projects}>
           <ProjectPage/>
         </div>
 
-        <div ref="Contact">
+        <div ref={this.Contact}>
           <SignUp/>
         </div>
         

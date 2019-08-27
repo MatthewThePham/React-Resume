@@ -12,7 +12,7 @@ export default function techDescrip(props) {
             <ArrowRight style={{color: '#607d8b'}} />
 
             <ListItemText 
-                primary={<Typography variant="subtitle2">{props.title}</Typography>}
+                primary={<Typography variant="subtitle2" >{props.title}</Typography>}
             />
         </ListItem>
     )

@@ -7,10 +7,13 @@ import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Fade from '@material-ui/core/Fade';
+
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import circleAvatar from '../IconOutlinedEmail.svg';
+
+import Flip from 'react-reveal/Flip';
 
 var validator = require('validator');
 
@@ -268,6 +271,7 @@ export default function SignUp() {
             </Grid>
           </Grid>
           
+          <Flip left>
           <Button
             type="submit"
             fullWidth
@@ -277,6 +281,7 @@ export default function SignUp() {
           >
             Send Email
           </Button>
+          </Flip>
         </form>
         </Fragment>
         :
