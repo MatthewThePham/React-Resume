@@ -33,7 +33,7 @@ class AboutPage extends Component{
                         <Card elevation={20} style={{ backgroundColor: '#607d8b'}}>
                             <CardMedia
                                 style = {{
-                                    paddingTop:"50%",
+                                    paddingTop:"70%",
                                     width:"100%"
                                 }}
 

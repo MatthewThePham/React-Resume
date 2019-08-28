@@ -18,11 +18,11 @@ class Homepage extends Component{
     render() {
         return (
           <header className="App-header">
-            <Grid container justify = 'space-evenly' style={{paddingTop:"10%",paddingBottom:"7%", paddingLeft:"24%",paddingRight:"10%", textAlign:"left"}}>
+            <Grid container justify = 'center' style={{paddingTop:"10%",paddingBottom:"7%", paddingLeft:"24%",paddingRight:"11%", textAlign:"left"}}>
                 <Grid item md>
 
                   <Fade in={true} timeout={2000}>
-                    <Typography variant="h1" style={{fontWeight:"bold" ,flexShrink: 1 }}>
+                    <Typography variant="h1" style={{fontWeight:"bold" }}>
                       Matthew 
                       <br/>
                       Pham

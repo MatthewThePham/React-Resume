@@ -94,19 +94,19 @@ class App extends Component{
                 aria-label="simple tabs example"
                 centered
               >
-                <Grow in={true} timeout={1500+1500}>
+                <Grow in={true} timeout={3000}>
                   <Tab label="Home" style={{ minWidth: 100}}/>
                 </Grow>
 
-                <Grow in={true} timeout={2000+1500}>
+                <Grow in={true} timeout={3500}>
                   <Tab label="About" style={{minWidth: 100}}/>
                 </Grow>
 
-                <Grow in={true} timeout={3000+1500}>
+                <Grow in={true} timeout={4000}>
                   <Tab label="Works" style={{minWidth: 100}}/>
                 </Grow>
 
-                <Grow in={true} timeout={3500+1500}>
+                <Grow in={true} timeout={4500}>
                   <Tab label="Contact" style={{minWidth: 100}}/>
                 </Grow>
 

@@ -21,7 +21,7 @@ export default function cardDescrip(props) {
     }
 
     return(
-        <Fade timeout="2000">
+        <Fade timeout={2000}>
         <Card elevation={24} style={{ backgroundColor: '#455a64'}}>
             <CardMedia
                 style = {{
@@ -42,15 +42,15 @@ export default function cardDescrip(props) {
                 <Typography variant="body2" style={{color: '#90a4ae', paddingBottom:"2%"}}>
                  <i>{props.date}</i>
                 </Typography>
-                <Typography variant="body1" component="p">
+                <Typography variant="body2" component="p">
                     {props.decription}
                     <br />
                 </Typography>
             </CardContent>
 
-            <CardContent style={{ backgroundColor: '#607d8b' }}>
-                 <Typography variant="subtitle2" style={{color: '#cfd8dc'}}>
-                    {props.technologyUsed}
+            <CardContent style={{ backgroundColor: '#607d8b'}}>
+                 <Typography variant="caption" style={{color: '#cfd8dc', whiteSpace: "pre-line"}}>
+                    {props.technologyUsed+"\n"}
                 </Typography>
 
                 <GithubButton link={props.link}/>
