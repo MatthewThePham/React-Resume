@@ -11,6 +11,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
 import Zoom from 'react-reveal/Zoom'; // Importing Zoom effect
+import Fade from 'react-reveal/Fade'; // Importing Zoom effect
 
 
 class AboutPage extends Component{
@@ -20,11 +21,10 @@ class AboutPage extends Component{
             <div style={{backgroundColor: '#282c34'}}>
 
                 <Typography variant="h3" component="h2" style={{ paddingTop:"5%", color: 'white'}}  >
-                    <hr width="60%"></hr>
-                    <b>About Me</b>
                     <hr width="70%"></hr>
+                    <b>About Me</b>
+                    <hr width="80%"></hr>
                 </Typography>
-
 
                 <Grid container justify = 'space-evenly' style={{paddingTop:"3%", paddingLeft:"15%",paddingRight:"15%", textAlign:"left"}}>
                     
@@ -56,7 +56,7 @@ class AboutPage extends Component{
                             I enjoy building web apps in both backend and frontend.
                             My expertise covers these languages and frameworks.
                         </Typography>
-
+                        
                         <Grid container justify="center">
                             <Grid item xs style={{paddingLeft:"3%", paddingRight:"3%"}}>
                                 <List>

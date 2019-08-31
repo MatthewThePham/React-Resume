@@ -95,19 +95,19 @@ class App extends Component{
                 centered
               >
                 <Grow in={true} timeout={3000}>
-                  <Tab label="Home" style={{ minWidth: 100}}/>
+                  <Tab label="Home" style={{ minWidth: 70}}/>
                 </Grow>
 
                 <Grow in={true} timeout={3500}>
-                  <Tab label="About" style={{minWidth: 100}}/>
+                  <Tab label="About" style={{minWidth: 70}}/>
                 </Grow>
 
                 <Grow in={true} timeout={4000}>
-                  <Tab label="Works" style={{minWidth: 100}}/>
+                  <Tab label="Works" style={{minWidth: 70}}/>
                 </Grow>
 
                 <Grow in={true} timeout={4500}>
-                  <Tab label="Contact" style={{minWidth: 100}}/>
+                  <Tab label="Contact" style={{minWidth: 70}}/>
                 </Grow>
 
               </Tabs>

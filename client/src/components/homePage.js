@@ -18,11 +18,11 @@ class Homepage extends Component{
     render() {
         return (
           <header className="App-header">
-            <Grid container justify = 'center' style={{paddingTop:"10%",paddingBottom:"7%", paddingLeft:"24%",paddingRight:"11%", textAlign:"left"}}>
+            <Grid container justify = 'center' style={{paddingTop:"10%",paddingBottom:"7%", paddingLeft:"24%",paddingRight:"17%", textAlign:"left"}}>
                 <Grid item md>
 
                   <Fade in={true} timeout={2000}>
-                    <Typography variant="h1" style={{fontWeight:"bold" }}>
+                    <Typography variant="h1" style={{fontSize:75, fontWeight:"bold" }}>
                       Matthew 
                       <br/>
                       Pham
@@ -30,7 +30,7 @@ class Homepage extends Component{
                   </Fade>
 
                   <Fade in={true} timeout={4500}>
-                    <Typography variant="h2"  style={{color: '#cfd8dc', paddingBottom:"3%"}}>
+                    <Typography variant="h3"  style={{color: '#cfd8dc', paddingBottom:"3%"}}>
                         Software Developer
                     </Typography>
                   </Fade>
@@ -47,7 +47,7 @@ class Homepage extends Component{
 
                   &nbsp;
 
-                  <Grow in={true} timeout={2000}>
+                  <Grow in={true} timeout={3500}>
                     <Button
                       size='small'
                       color="primary"
@@ -55,7 +55,7 @@ class Homepage extends Component{
                       href={'https://drive.google.com/file/d/1VlsMCqk9Q4rO6KLlNGOFVmUuDGfEkKss/view?usp=sharing'}
                       >
                       Resume  &nbsp;
-                      <DescriptionOutlinedIcon style={{ height:"30", width:"30"}}/>
+                      <DescriptionOutlinedIcon style={{ height:"20", width:"30"}}/>
                     </Button>
                   </Grow>
                   <hr width="225px" align="left"></hr>
@@ -63,7 +63,7 @@ class Homepage extends Component{
 
                 </Grid>  
 
-              <Fade in={true} timeout={1500}>
+              <Fade in={true} timeout={2000}>
                 <Grid item md={6} style={{ paddingTop:"5%", paddingRight:"20%"}}>
                   <img src={logo} style={{align:"left"}} className="App-logo" alt="logo"/>
                 </Grid>  

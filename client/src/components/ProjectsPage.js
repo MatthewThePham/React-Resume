@@ -10,15 +10,15 @@ class ProjectsPage extends Component{
    
     render(){
         return(
-            <div style={{ paddingTop:"10%", paddingBottom: "5%", backgroundColor: '#282c34'}}>
+            <div style={{ paddingTop:"10%", paddingBottom: "10%", backgroundColor: '#282c34'}}>
                 <Typography variant="h3" component="h2" style={{ color: 'white'}}  >
-                    <hr width="60%"></hr>
-                    <b>Projects</b>
                     <hr width="70%"></hr>
+                    <b>Projects</b>
+                    <hr width="85%"></hr>
                 </Typography>
 
-                <Grid container justify = 'space-evenly' alignItems="stretch" style={{ paddingTop:"1%" ,paddingLeft:"2%", paddingRight:"2%",}}>     
-                    <Grid item xs={5} md={3} style={{paddingBottom:"4%" }}>
+                <Grid container justify = 'space-evenly'style={{ paddingTop:"1%" ,paddingLeft:"2%", paddingRight:"2%",}}>     
+                    <Grid item xs={7} md={3} style={{paddingBottom:"4%" }}>
                         <CardProj 
                             imagePath="alexaLogo.png"
                             
@@ -30,7 +30,7 @@ class ProjectsPage extends Component{
                         />
                     </Grid>
 
-                    <Grid item xs={5} md={3}style={{paddingBottom:"4%"}} >
+                    <Grid item xs={7} md={3}style={{paddingBottom:"4%"}} >
                         <CardProj 
                             imagePath="reactLogo.svg"
                             
@@ -42,7 +42,7 @@ class ProjectsPage extends Component{
                         />
                     </Grid>
 
-                    <Grid item xs={5} md={3}>
+                    <Grid item xs={7} md={3}>
                         <CardProj 
                             imagePath="alexaLogo.png"
                             

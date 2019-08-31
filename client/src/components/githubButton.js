@@ -5,16 +5,15 @@ import Grow from '@material-ui/core/Grow';
 
 export default function githubButton(props){
     return(
-        <Grow in={true} timeout={2000}>
+        <Grow in={true} timeout={3500}>
             <Button
                 size='small'
                 color="primary"
                 variant="contained"
                 href={props.link}
-                
                 >
                 GitHub  &nbsp;
-                < img src={logoImage} height="30" width="30" />
+                < img src={logoImage} height="20" width="30" />
             </Button>
         </Grow>
 
