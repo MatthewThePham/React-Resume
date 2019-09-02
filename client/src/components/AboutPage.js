@@ -33,7 +33,7 @@ class AboutPage extends Component{
                         <Card elevation={20} style={{ backgroundColor: '#607d8b'}}>
                             <CardMedia
                                 style = {{
-                                    paddingTop:"70%",
+                                    paddingTop:"80%",
                                     width:"100%"
                                 }}
 
@@ -41,18 +41,14 @@ class AboutPage extends Component{
                                     require("../asuEngineering.jpeg")
                                 } 
                             />
-                            <CardContent>
-                                <Typography variant="subtitle2"  style={{ textAlign:"center", color: '#cfd8dc'}}>
-                                    <i>Majoring in <b>Computer Science</b> at <b style={{color:"white"}}>Arizona State University</b>.</i>
-                                </Typography>
-                            </CardContent>
                         </Card>
+                        <CardMedia></CardMedia>
                         </Zoom>
                     </Grid>
 
                     <Grid item md={7} style={{paddingLeft:"2%"}}>
-                        <Typography variant="subtitle1" style={{ textAlign:"left", color: '#cfd8dc',paddingBottom:"3%", paddingLeft:"5%"}}>
-                            My name is <b style={{color:"white"}}>Matthew Pham</b>. I am a Software Engineer currently studying at ASU for my bachelors in Computer Science.
+                        <Typography variant="subtitle1" style={{fontSize:16 , textAlign:"left", color: '#cfd8dc',paddingBottom:"3%", paddingLeft:"5%"}}>
+                            My name is <b style={{color:"white"}}>Matthew Pham</b>. I am a Software Engineer currently majoring in <i><b>Computer Science</b></i> at <b style={{color:"white"}}>Arizona State University</b>.
                             I enjoy building web apps in both backend and frontend.
                             My expertise covers these languages and frameworks.
                         </Typography>

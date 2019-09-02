@@ -10,7 +10,7 @@ class ProjectsPage extends Component{
    
     render(){
         return(
-            <div style={{ paddingTop:"10%", paddingBottom: "10%", backgroundColor: '#282c34'}}>
+            <div style={{ paddingTop:"5%", paddingBottom: "1%", backgroundColor: '#282c34'}}>
                 <Typography variant="h3" component="h2" style={{ color: 'white'}}  >
                     <hr width="70%"></hr>
                     <b>Projects</b>

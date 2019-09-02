@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import Fade from '@material-ui/core/Fade';
 import logo from '../circle-cropped.png';
+//import logo from '../profilePhoto.jpg'
 import './HomePage.css';
 
 import Typography from '@material-ui/core/Typography';
@@ -18,7 +19,7 @@ class Homepage extends Component{
     render() {
         return (
           <header className="App-header">
-            <Grid container justify = 'center' style={{paddingTop:"10%",paddingBottom:"7%", paddingLeft:"24%",paddingRight:"17%", textAlign:"left"}}>
+            <Grid container justify = 'center' style={{paddingTop:"11%",paddingBottom:"6%", paddingLeft:"24%",paddingRight:"20%", textAlign:"left"}}>
                 <Grid item md>
 
                   <Fade in={true} timeout={2000}>
@@ -59,12 +60,10 @@ class Homepage extends Component{
                     </Button>
                   </Grow>
                   <hr width="225px" align="left"></hr>
-
-
                 </Grid>  
 
               <Fade in={true} timeout={2000}>
-                <Grid item md={6} style={{ paddingTop:"5%", paddingRight:"20%"}}>
+                <Grid item md={6} style={{ paddingTop:"5%", paddingRight:"20%",paddingLeft:"5%"}}>
                   <img src={logo} style={{align:"left"}} className="App-logo" alt="logo"/>
                 </Grid>  
               </Fade>

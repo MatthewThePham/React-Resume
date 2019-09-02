@@ -259,7 +259,7 @@ export default function SignUp() {
 
                 variant="outlined"
                 multiline
-                rows="4"
+                rows="5"
                 required fullWidth
                 name="multiline"
                 label="Message"
