@@ -34,7 +34,7 @@ class AboutPage extends Component{
                             <CardMedia
                                 style = {{
                                     paddingTop:"80%",
-                                    width:"100%"
+                                    width:"330px"
                                 }}
 
                                 image={ 
