@@ -20,7 +20,7 @@ router.post('/send', async (req, res) => {
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
+    host: "smtp-mail.outlook.com",
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
@@ -31,9 +31,9 @@ router.post('/send', async (req, res) => {
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: req.body.email, // sender address
-    to: "bar@example.com, baz@example.com", // list of receivers
-    subject: `Nodemailer, from ${req.body.name}`, // Subject line
+    from: process.env.EMAIL, // sender address
+    to: process.env.EMAIL, // list of receivers
+    subject: `Nodemailer, Name: ${req.body.name}, Email: ${req.body.email}`, // Subject line
     text: req.body.message, // plain text body
     //html: "<b>Hello world?</b>" // html body
   });
@@ -42,7 +42,7 @@ router.post('/send', async (req, res) => {
   // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 
   // Preview only available when sending through an Ethereal account
-  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+  //console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 
   res.send({ express: 'Able to send from mailer' });
