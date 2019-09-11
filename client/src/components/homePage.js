@@ -1,9 +1,6 @@
-//TODO fix the scaling of text of image of photo
-
 import React, { Component } from 'react';
 import Fade from '@material-ui/core/Fade';
 import logo from '../circle-cropped.png';
-//import logo from '../profilePhoto.jpg'
 import './HomePage.css';
 
 import Typography from '@material-ui/core/Typography';
@@ -53,7 +50,7 @@ class Homepage extends Component{
                       size='small'
                       color="primary"
                       variant="contained"
-                      href={'https://drive.google.com/file/d/1VlsMCqk9Q4rO6KLlNGOFVmUuDGfEkKss/view?usp=sharing'}
+                      href={'https://drive.google.com/file/d/1eQ5ttPKCn4_Df6vZ_8q-NHdM3sJznkFd/view?usp=sharing'}
                       >
                       Resume  &nbsp;
                       <DescriptionOutlinedIcon style={{ height:"20", width:"30"}}/>

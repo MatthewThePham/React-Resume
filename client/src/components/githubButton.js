@@ -13,7 +13,7 @@ export default function githubButton(props){
                 href={props.link}
                 >
                 GitHub  &nbsp;
-                < img src={logoImage} height="20" width="30" />
+                <img src={logoImage} height="20" width="30" />
             </Button>
         </Grow>
 

@@ -7,10 +7,12 @@
 
 * **What technologies were used?**
 
+
 > This website uses React for the frontend client. Material UI is used for GUI objects. 
 
 > Express is used for the backend server. Node mailer was used to forward emails messages.
-> The backend and frontend were written in Javascript. Here is the website link: matthew-resume.herokuapp.com
+> The backend and frontend were written in Javascript. Here is the [Website Link ](matthew-resume.herokuapp.com):
+
 
 * **Features?**
 
@@ -40,4 +42,3 @@
 > 1.  Change directory into outermost folder and run "yarn start" to run the start script in the server. This should run on localhost 5000.
 > 1.  Open a new terminal and change to the client folder. Run the command "yarn start" to start the React client. This should run on localhost 3000.
 > 1.  Test away!
-

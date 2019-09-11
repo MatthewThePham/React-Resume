@@ -1,5 +1,3 @@
-//TODO add ENV file with actual email and password
-
 const express = require('express');
 const router = express.Router();
 const nodemailer = require("nodemailer");
@@ -7,12 +5,6 @@ const nodemailer = require("nodemailer");
 
 // async..await is not allowed in global scope, must use a wrapper
 router.post('/send', async (req, res) => {
-
-/*
-    console.log("This reached the mailer : " + req.body.name);
-    res.send({ express: 'Able to send from mailer' });
-*/
-
     
   // Generate test SMTP service account from ethereal.email
   // Only needed if you don't have a real mail account for testing
@@ -24,8 +16,8 @@ router.post('/send', async (req, res) => {
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: process.env.EMAIL, // generated ethereal user
-      pass: process.env.PASSWORD // generated ethereal password
+      user: process.env.EMAIL, // ENV variable configed from Heroku
+      pass: process.env.PASSWORD // ENV variable configed from Heroku
     } 
   });
 
@@ -39,13 +31,6 @@ router.post('/send', async (req, res) => {
   });
 
   console.log("Message sent: %s", info.messageId);
-  // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-
-  // Preview only available when sending through an Ethereal account
-  //console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-  // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-
-  res.send({ express: 'Able to send from mailer' });
 
 })
 

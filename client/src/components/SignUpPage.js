@@ -15,10 +15,10 @@ import circleAvatar from '../IconOutlinedEmail.svg';
 
 import Flip from 'react-reveal/Flip';
 
+//used to check if user input is valid
 var validator = require('validator');
 
-function MadeWithLove() {
-    
+function MadeWithLove() {   
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Powered by ⚡ React ⚡'}
@@ -31,11 +31,6 @@ function MadeWithLove() {
 
 const useStyles = makeStyles(theme => ({
   '@global': {
-    /*
-    body: {
-      backgroundColor: theme.palette.common.white,
-    },
-    */
    palette: {
     type: 'dark',
     }
@@ -69,6 +64,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function SignUp() {
   const classes = useStyles();
+
   const [values, setValues] = React.useState({
     name: '',
     email: '',
@@ -77,10 +73,8 @@ export default function SignUp() {
 
     nameError:false,
     nameErrorMessage:'',
-
     emailError:false,
     emailErrorMessge:'',
-
     messageError:false,
     messageErrorMessage:''
   });
@@ -136,6 +130,8 @@ export default function SignUp() {
 
   }
 
+
+
   function handleSubmit (e) {
    e.preventDefault();
 
@@ -159,27 +155,17 @@ export default function SignUp() {
 
     })
     //const body = await response.text();
-  
-
     console.log("data sent")
-
-    setValues({ ...values, submission:true });
-    
-    //console.log(values.name, values.email, values.message);
+    setValues({ ...values, submission:true });    
    } 
-    else
-    {
+   else{
     console.log("error")
    }
 
   }
 
   const handleChange = name => event => {
-
     setValues({ ...values, [name]: event.target.value });
-
-    console.log("data saved");
-
   };
 
   return (
@@ -196,14 +182,35 @@ export default function SignUp() {
         ! values.submission 
         ?
         <Fragment>
-        <Typography component="h1" variant="h5" className={classes.input}>
-          Contact Me
-        </Typography>
-        <form className={classes.form} noValidate onSubmit={handleSubmit}>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
+          <Typography component="h1" variant="h5" className={classes.input}>
+            Contact Me
+          </Typography>
 
+          <form className={classes.form} noValidate onSubmit={handleSubmit}>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField
+                  inputProps={{
+                    className: classes.input
+                  }}
+
+                  InputLabelProps={{
+                    className: classes.inputLabel
+                  }}
+                  variant="outlined" 
+                  required
+                  fullWidth
+                  id="firstName"
+                  label="Contact Name"
+                  name="firstName"
+                  autoComplete="fname"
+                  error={values.nameError}
+                  helperText={values.nameErrorMessage}
+                  onChange={handleChange('name')}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
                 inputProps={{
                   className: classes.input
                 }}
@@ -211,80 +218,57 @@ export default function SignUp() {
                 InputLabelProps={{
                   className: classes.inputLabel
                 }}
-                
-                variant="outlined" 
-                required
-                fullWidth
-                id="firstName"
-                label="Contact Name"
-                name="firstName"
-                autoComplete="fname"
-                error={values.nameError}
-                helperText={values.nameErrorMessage}
-                onChange={handleChange('name')}
-              />
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
+                  error={values.emailError}
+                  helperText={values.emailErrorMessge}
+                  onChange={handleChange('email')}
+
+                />
+              </Grid>
+              <Grid item xs={12} >
+                <TextField
+                  inputProps={{
+                    className: classes.input
+                  }}
+
+                  InputLabelProps={{
+                    className: classes.inputLabel
+                  }}
+                  variant="outlined"
+                  multiline
+                  rows="5"
+                  required fullWidth
+                  name="multiline"
+                  label="Message"
+                  id="Multiline"
+                  error={values.messageError}
+                  helperText={values.messageErrorMessage}
+                  onChange={handleChange('message')}
+                />
+              </Grid>
             </Grid>
-            <Grid item xs={12}>
-              <TextField
-
-              inputProps={{
-                className: classes.input
-              }}
-
-              InputLabelProps={{
-                className: classes.inputLabel
-              }}
-                variant="outlined"
-                required
-                fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-                error={values.emailError}
-                helperText={values.emailErrorMessge}
-                onChange={handleChange('email')}
-
-              />
-            </Grid>
-            <Grid item xs={12} >
-              <TextField
-                inputProps={{
-                  className: classes.input
-                }}
-
-                InputLabelProps={{
-                  className: classes.inputLabel
-                }}
-
-                variant="outlined"
-                multiline
-                rows="5"
-                required fullWidth
-                name="multiline"
-                label="Message"
-                id="Multiline"
-                error={values.messageError}
-                helperText={values.messageErrorMessage}
-                onChange={handleChange('message')}
-              />
-            </Grid>
-          </Grid>
-          
-          <Flip left>
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit} 
-          >
-            Send Email
-          </Button>
-          </Flip>
-        </form>
+            
+            <Flip left>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit} 
+            >
+              Send Email
+            </Button>
+            </Flip>
+          </form>
         </Fragment>
         :
+
         <Fragment>
             <Fade in={true} timeout={1000}>
               <Typography component="h3" variant="h5" className={classes.input}>
@@ -296,11 +280,8 @@ export default function SignUp() {
                 We will get back to you shortly.
               </Typography>
             </Fade>
-
         </Fragment>
-
         }
-
       </div>
       <Box mt={5}>
         <MadeWithLove />
