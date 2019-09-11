@@ -8,10 +8,8 @@ import List from '@material-ui/core/List';
 
 import CardMedia from '@material-ui/core/CardMedia';
 import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 
 import Zoom from 'react-reveal/Zoom'; // Importing Zoom effect
-import Fade from 'react-reveal/Fade'; // Importing Zoom effect
 
 
 class AboutPage extends Component{
@@ -30,11 +28,13 @@ class AboutPage extends Component{
                     
                     <Grid item md={5} style={{paddingLeft:"5%", paddingBottom:"10%"}}>
                         <Zoom timeout={2000}>
-                        <Card elevation={20} style={{ backgroundColor: '#607d8b'}}>
+
+                        <Card style={{ backgroundColor: '#282c34'}}>
                             <CardMedia
                                 style = {{
+                                    elevation:20,
                                     paddingTop:"80%",
-                                    width:"330px"
+                                    width:"330px",
                                 }}
 
                                 image={ 

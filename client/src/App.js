@@ -7,12 +7,12 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
 import Grow from '@material-ui/core/Grow';
 
-
 //example from material-ui
 import Homepage from './components/homePage';
 import SignUp from './components/SignUpPage';
 import ProjectPage from './components/ProjectsPage';
 import AboutPage from './components/AboutPage';
+
 
 
 //fancy UI hiding for navbar
@@ -59,16 +59,16 @@ class App extends Component{
     //const temp = this.state.refs;
     console.log(newValue);
     if( newValue === 0){
-      this.Home.current.scrollIntoView({behavior: "smooth",block: "center"});
+      this.Home.current.scrollIntoView({behavior: "smooth",block: "start"});
     }
     else if(newValue === 1){
-      this.About.current.scrollIntoView({behavior: "smooth", block: "center"});
+      this.About.current.scrollIntoView({behavior: "smooth", block: "start"});
     }
     else if(newValue === 2){
-      this.Projects.current.scrollIntoView({behavior: "smooth", block: "center"});
+      this.Projects.current.scrollIntoView({behavior: "smooth", block: "start"});
     }
     else if(newValue === 3){
-      this.Contact.current.scrollIntoView({behavior: "smooth", block: "center"});
+      this.Contact.current.scrollIntoView({behavior: "smooth", block: "start"});
     }
   }
 

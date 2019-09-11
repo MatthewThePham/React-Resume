@@ -42,7 +42,7 @@ class Homepage extends Component{
                     </Typography>
                   </Fade>
 
-                  <hr width="225px" align="left"></hr>
+                  <hr width="223px" align="left"></hr>
 
                   <GithubButton link="https://gitlab.com/users/MatthewPh/projects" />  
 
@@ -59,7 +59,7 @@ class Homepage extends Component{
                       <DescriptionOutlinedIcon style={{ height:"20", width:"30"}}/>
                     </Button>
                   </Grow>
-                  <hr width="225px" align="left"></hr>
+                  <hr width="223px" align="left"></hr>
                 </Grid>  
 
               <Fade in={true} timeout={2000}>

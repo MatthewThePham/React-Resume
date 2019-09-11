@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from "@material-ui/core/Grid";
 
-import { makeStyles } from '@material-ui/core/styles';
 import CardProj from './cardDescrip';
 
 class ProjectsPage extends Component{
@@ -18,7 +17,7 @@ class ProjectsPage extends Component{
                 </Typography>
 
                 <Grid container justify = 'space-evenly'style={{ paddingTop:"1%" ,paddingLeft:"2%", paddingRight:"2%",}}>     
-                    <Grid item xs={7} md={3} style={{paddingBottom:"4%" }}>
+                    <Grid item xs={7} md={3} style={{paddingBottom:"4%"}}>
                         <CardProj 
                             imagePath="alexaLogo.png"
                             
@@ -30,30 +29,43 @@ class ProjectsPage extends Component{
                         />
                     </Grid>
 
-                    <Grid item xs={7} md={3}style={{paddingBottom:"4%"}} >
+                    <Grid item xs={7} md={3} style={{paddingBottom:"4%"}} >
                         <CardProj 
                             imagePath="reactLogo.svg"
                             
-                            title="React Resume Website"
-                            date="Summer/Fall 2019"
+                            title="Messaging Web App"
+                            date="Fall 2019"
                             decription="Fullstack application using React framework with Express backend."
-                            technologyUsed="Javascript, React, Express, NodeJS"
-                            link="https://gitlab.com/MatthewPh/"
+                            technologyUsed="Javascript, React, Express, SocketIO, NodeJS"
+                            link="https://gitlab.com/MatthewPh/react-socketio"
                         />
                     </Grid>
 
-                    <Grid item xs={7} md={3}>
+                    <Grid item xs={7} md={3} style={{paddingBottom:"4%"}}>
+                            <CardProj 
+                                imagePath="alexaLogo.png"
+                                
+                                title="Counter Club"
+                                date="Summer 2018"
+                                decription="Alexa Skill interfacing dynamic speech input with DynamoDB."
+                                technologyUsed="NodeJS, NoSQL DynamoDB, Lambda AWS"
+                                link="https://gitlab.com/MatthewPh/CounterClub"
+                            />
+                    </Grid>
+                </Grid>
+
+                <Grid container justify = 'space-evenly'style={{ paddingTop:"1%" ,paddingLeft:"2%", paddingRight:"2%",}}>     
+                    <Grid item xs={7} md={3} style={{paddingBottom:"4%"}} >
                         <CardProj 
-                            imagePath="alexaLogo.png"
+                            imagePath="reactLogo.svg"
                             
-                            title="Counter Club"
-                            date="Summer 2018"
-                            decription="Alexa Skill interfacing dynamic speech input with DynamoDB."
-                            technologyUsed="NodeJS, NoSQL DynamoDB, Lambda AWS"
-                            link="https://gitlab.com/MatthewPh/CounterClub"
+                            title="Resume Website"
+                            date="Summer/Fall 2019"
+                            decription="Code used to create this fullstack website."
+                            technologyUsed="Javascript, React, Express, NodeJS"
+                            link="https://gitlab.com/MatthewPh/react-resume"
                         />
                     </Grid>
-
                 </Grid>
 
             </div>
