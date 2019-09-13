@@ -11,7 +11,7 @@
 > This website uses React for the frontend client. Material UI is used for GUI objects. 
 
 > Express is used for the backend server. Node mailer was used to forward emails messages.
-> The backend and frontend were written in Javascript. Here is the [Website Link ](matthew-resume.herokuapp.com):
+> The backend and frontend were written in Javascript. Here is the Website Link: https://matthew-resume.herokuapp.com/
 
 
 * **Features?**
@@ -25,7 +25,7 @@
 
 * **Purpose of website?**
 
-> Showcase a visual resume and experiment with frontend heavy code.
+> Showcase a visual resume and experiment with frontend heavy React code.
 
 
 ----
