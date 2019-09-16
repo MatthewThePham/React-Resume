@@ -1,7 +1,6 @@
 # Personal Resume Website
 
-![GIFofWebsiteUse](https://gitlab.com/MatthewPh/react-resume/raw/master/NON_ESSENTIAL_FILE_resumeWebsiteShowcase.gif)
-
+![GIFofWebsiteUse](https://github.com/MatthewThePham/React-Resume/blob/master/NON_ESSENTIAL_FILE_resumeWebsiteShowcase.gif)
 
 ## General questions
 
